@@ -1,0 +1,31 @@
+name: alg_shown_flutter
+
+repository:
+  type: github
+  origin: https://github.com/ywxgod/alg_shown_flutter.git
+  owner: ywx1818@163.com
+  name: alg_shown_flutter
+
+ide:
+  intellij:
+    enabled: true
+
+packages:
+  - packages/**
+  - apps/**
+
+command:
+  bootstrap:
+    usePubspecOverrides: true
+
+scripts:
+  analyze:
+    exec: flutter analyze .
+  outdated:
+    exec: flutter pub outdated
+  test:
+    exec: flutter test
+  dev:
+    exec: flutter run -d windows
+    packageFilters:
+      fileExists: "alg_shown.iml"
